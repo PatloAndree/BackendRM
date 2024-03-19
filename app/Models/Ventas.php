@@ -19,6 +19,8 @@ class Ventas extends Authenticatable
      */
     protected $fillable = [
         'nombre',
+        'codigo_venta',
+        'user_id',
         'tipo_venta',
         'monto',
         'ganancia',

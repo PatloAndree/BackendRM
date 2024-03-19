@@ -38,7 +38,7 @@ Route::get('/usuarios', [UsersController::class, 'index'])->name('users.index');
 Route::get('/usuarios/listar', [UsersController::class, 'usersGeneral'])->name('users.usersGeneral');
 Route::post('/usuarios/agregarUsuario', [UsersController::class, 'agregarUsuario'])->name('users.agregarUsuario');
 Route::put('/usuarios/editarUsuario', [UsersController::class, 'editarUsuario'])->name('users.editarUsuario');
-Route::delete('/usuarios/eliminarUsuario/{id?}', [UsersController::class, 'eliminarUsuario'])->name('users.eliminarUsuario');   
+Route::delete('/usuarios/eliminarUsuario/{id?}', [UsersController   ::class, 'eliminarUsuario'])->name('users.eliminarUsuario');   
 
 Route::get('/ventas/listar', [VemtasController::class, 'ventasGeneral'])->name('ventas.ventasGeneral');
 Route::post('/ventas/listarTipo', [VemtasController::class, 'ventasTipo'])->name('ventas.ventasTipo');
