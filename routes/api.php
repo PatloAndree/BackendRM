@@ -44,6 +44,8 @@ Route::get('/ventas/listar', [VemtasController::class, 'ventasGeneral'])->name('
 Route::post('/ventas/listarTipo', [VemtasController::class, 'ventasTipo'])->name('ventas.ventasTipo');
 Route::post('/ventas/agregarVenta', [VemtasController::class, 'agregarVentas'])->name('ventas.agregarVentas');
 Route::put('/ventas/editarVenta', [VemtasController::class, 'editarVenta'])->name('ventas.editarVenta');
+Route::delete('/ventas/eliminarVenta/{id?}', [VemtasController::class, 'eliminarVenta'])->name('ventas.eliminarVenta');   
+
 
 Route::get('/productos/listar', [ProductosController::class, 'productosGeneral'])->name('productos.productosGeneral');
 Route::post('/productos/agregarProducto', [ProductosController::class, 'agregarProducto'])->name('productos.agregarProducto');

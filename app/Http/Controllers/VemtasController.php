@@ -233,4 +233,16 @@ class VemtasController extends Controller
             echo json_encode(array("sw_error" => 1, "titulo" => "Error", "type" => "error", "message" => "Error al editar la venta"));
         }
     }
+
+    public function eliminarVenta($idVenta){
+        // Verifica si se realizaron cambios
+        $Usuario = Ventas::where('id',$idVenta)->update(['status'=>0]);
+        if ($Usuario) {
+            // Inserción exitosa
+            echo json_encode(array("sw_error" => 0, "titulo" => "Éxito", "type" => "success", "message" => "Se eliminó correctamente la venta"));
+        } else {
+            // Hubo un error en la inserción
+            echo json_encode(array("sw_error" => 1, "titulo" => "Error", "type" => "error", "message" => "Error al eliminar la venta"));
+        }
+	}
 }
